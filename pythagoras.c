@@ -7,10 +7,6 @@ int main(void)
     // a² + b² = c²
     // Find a + b + c = 1000
 
-    int a = 0;
-    int b = 0;
-    int c = 0;
-
     for (size_t a = 0; a < 998; a++)
     {
         for (size_t b = a+1; b < 999; b++)
@@ -19,7 +15,7 @@ int main(void)
             {        
                 if (a*a + b*b == c*c && a + b + c == 1000)
                 {
-                    printf("a=%d\nb=%d\nc=%d\n\n", a, b, c);
+                    printf("a=%zu\nb=%zu\nc=%zu\n\n", a, b, c);
                 }
             }
         }

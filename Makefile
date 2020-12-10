@@ -28,3 +28,6 @@ singlylinkedlist:
 	$(CC) singlylinkedlist.c -o singlylinkedlist
 weekday:
 	$(CC) weekday.c -o weekday
+
+clean:
+	rm binarysearchtree efunc fileparse guessnumber integrate ip measurement palindrom pong primfac pythagoras singlylinkedlist weekday

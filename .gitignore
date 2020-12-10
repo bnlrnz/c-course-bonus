@@ -35,6 +35,19 @@
 *.i*86
 *.x86_64
 *.hex
+binarysearchtree
+efunc
+fileparse
+guessnumber
+integrate
+ip
+measurement
+palindrom
+pong
+primfac
+pythagoras
+singlylinkedlist
+weekday
 
 # Debug files
 *.dSYM/

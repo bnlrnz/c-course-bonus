@@ -21,12 +21,14 @@ void push_front(node** root, int data){
     *root = new_node;
 }
 
-void pop_front(node** root){
-    if(*root == NULL) return;
+int pop_front(node** root){
+    if(*root == NULL) return -1;
     node* new_root = (*root)->next;
+    int ret_val = (*root)->data;
     free(*root);
-    if(new_root == NULL) return;
+    if(new_root == NULL) return -1;
     *root = new_root;
+    return ret_val;
 }
 
 void push_back(node* root, int data){
@@ -42,15 +44,17 @@ void push_back(node* root, int data){
     root->next = new_node;
 }
 
-void pop_back(node* root){
-    if(root == NULL) return;
+int pop_back(node* root){
+    if(root == NULL) return -1;
     node* prev;
     while (root->next != NULL){
         prev = root;
         root = root->next;
     }
+    int ret_val = root->data;
     free(root);
     prev->next = NULL;
+    return ret_val;
 }
 
 void insert_at_index(node** root, int index, int data){
